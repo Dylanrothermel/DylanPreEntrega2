@@ -14,23 +14,39 @@
 
   <div id="content"></div>
 
-  <table class="table table-hover table-cart">
-    <thead>
-      <tr>
-        <th>Item</th>
-        <th>Precio</th>
-        <th>Cantidad</th>
-      </tr>
-    </thead>
-    <tbody class="itemsCarrito">
-      
-       
-    </tbody>
-  </table>
-  <div class="totalCarrito"> 
-    <strong>Total</strong>
-    <span>$0</span>
-  </div> 
+  <section class="container content-section">
+    <h2 class="section-header">Carrito</h2>
+    <div class="carrito-fila">
+        <span class="carrito-item carrito-header carrito-columna">Item</span>
+        <span class="carrito-precio carrito-header carrito-columna">Precio</span>
+        <span class="carrito-cantidad carrito-header carrito-columna">Cantidad</span>
+    </div>
+    <div class="carrito-items">
+    </div>
+    <div class="carrito-total">
+        <strong class="carrito-total-titulo">Total</strong>
+        <span class="carrito-total-precio">$0</span>
+    </div>
+    <button class="btn btn-primary btn-comprar" type="button">Comprar</button>
+</section>
+
+<!-- <section class="container content-section">
+  <h2 class="section-header">Carrito</h2>
+  <div class="carrito-fila">
+      <span class="cart-item cart-header cart-column">Item</span>
+      <span class="cart-price cart-header cart-column">Precio</span>
+      <span class="cart-quantity cart-header cart-column">Cantidad</span>
+  </div>
+  <div class="carrito-items">
+  </div>
+  <div class="cart-total">
+      <strong class="cart-total-title">Total</strong>
+      <span class="cart-total-price">$0</span>
+  </div>
+  <button class="btn btn-primary btn-purchase" type="button">Comprar</button>
+</section> -->
+
+
 
 
     
@@ -39,4 +55,3 @@
 </body>
 </html>
 
-        
