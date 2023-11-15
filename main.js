@@ -30,49 +30,29 @@ function ready() {
 const divContenido = document.getElementById("content")
 
 
+const cargarProductos = async() => {
+    const resp = await fetch('https://mocki.io/v1/970b64de-dae8-48a9-8ba9-fc9efb420a36 ')
+    const productos = await resp.json()
+    productos.forEach(prod => {
+        const div = document.createElement("div")
+        div.innerHTML = `<div class="card" style="width: 400px;">
+        <div class="card-body">
+          <h5 class="card-title">${prod.nombre}</h5>
+          <p class="card-text">${prod.precio}</p>
+          <button class="btn btn-primary"type="button">Añadir al carrito</button>
+        </div>
+      </div>`
+      divContenido.appendChild(div)
+    })
+}
+
+cargarProductos()
 
 
-const productos = [
-    {
-        nombre: "Galaxy A23 5G",
-        precio: 162.349
-    },
-    {
-       nombre: "Moto G32 6/128",
-       precio: 134.999
-   },
-   {
-       nombre: "Moto G23",
-       precio: 107.999
-   },
-   {
-       nombre: "Moto E13",
-       precio: 61.199
-   },
-   {
-       nombre: "Moto E22 4/64",
-       precio: 80.999
-   },
-   {
-       nombre: "Moto G72",
-       precio: 161.999
-   },
-
-]
 
 
-productos.forEach((producto) => {
-    let contenedorProducto = document.createElement("div")
-    contenedorProducto.innerHTML = `<div class="card" style="width: 400px;">
-    <div class="card-body">
-      <h5 class="card-title">${producto.nombre}</h5>
-      <p class="card-text">${producto.precio}</p>
-      <button class="btn btn-primary"type="button">Añadir al carrito</button>
-    </div>
-  </div>`
 
-  divContenido.appendChild(contenedorProducto)
-})
+
 
 function botonComprar(){
     alert("Gracias por su compra")
@@ -159,7 +139,9 @@ function actualizarCarrito(){
     document.getElementsByClassName('carrito-total-precio')[0].innerText = '$' + total
 }
 
-
+function guardarCarrito(){
+    localStorage.setItem("Carrito", )
+}
 
 
 
